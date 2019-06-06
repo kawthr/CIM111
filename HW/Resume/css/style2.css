@@ -1,47 +1,56 @@
 <style type="text/css">
-header{
+html{
+  background-color: #444;
+  padding: 0 1em
 
-        width: 960px;
+}
+body{
+  background-color: #fff;
+  font-family:'lato', sans-serif;
+  margin: 1em auto;
+  max-width: 50em;
+  height: 52.625em
+}
+#section-left{
+  width: 35%;
+  float: left;
+  height:100%;
+  background-color: #DEB887;
+  color: #fff
+  text-align: center;
+}
+#section-right.section.logo{
+height:150px;
+width:150px;
+border-radius:50%;
+margin: 0 auto;
+background:
+<img src="images/min.png" alt="my pic">;
+}
 
-        height: 100px;
+.intro hr{
+  width: 4em;
+  display: block;
+  height: 2px;
+  border: 0px
+  border-top: 2px solid;
+}
 
-        background-color: red;
-
-        margin: 0 auto;
-
-      }
-
-
-
-      footer{
-
-        width: 960px;
-
-        height: 100px;
-
-        background-color: red;
-
-        margin: 0 auto;
-
-      }
-
-
-
-      main{
-
-        width: 920px;
-
-        <!-- height: 500px; -->
-
-        height: auto;
-
-        background-color: green;
-
-        padding: 20px;
-
-        margin: 0 auto;
-
-      }
-
-
-     </style>
+.dob {
+  text-decoration: overline underline;
+}
+.intro .content{
+  margin-bottom: 20px
+}
+#contact {
+  magrin-top: 40px
+}
+h1 {
+  text-transform: uppercase;
+}
+#section-left{
+  width: 65%
+  float:right;
+  height: %100;
+}
+</style>
