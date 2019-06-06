@@ -1,0 +1,41 @@
+header,footer{
+  width:700px;
+  height:50px;
+
+}
+
+#section1{
+width: 700px;
+height: auto;
+display: grid;
+grid-tempate-row: 400px;
+grid-tempate-columns: 340px 340px;
+grid-column-gap: 280px;
+
+
+#wolfimg{
+width:350px;
+}
+
+#section2{
+  width:700px;
+  height: auto;
+  display: grid;
+  grid-template: 1fr;
+  grid-template-colmuns: 1fr 1fr 1fr;
+  grid-colmun-gap:10px;
+}
+
+#section2{
+  width:700px;
+  height: auto;
+  display: grid;
+  grid-template: 1fr;
+  grid-template-colmuns: 1fr 2fr;
+  grid-colmun-gap:10px;
+}
+
+#section3{
+  width: 700px;
+  height: auto;
+}

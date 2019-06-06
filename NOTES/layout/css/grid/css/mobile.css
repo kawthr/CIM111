@@ -1,0 +1,8 @@
+@import "desktop.css";
+header,main,footer{
+  width:480px;
+}
+  #section1{
+    width: 480px;
+    
+  }
