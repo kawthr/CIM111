@@ -1,0 +1,395 @@
+
+
+
+
+Pull requests
+Issues
+Marketplace
+Explore
+
+
+
+
+
+
+ Watch
+1
+ Star
+1
+ Fork
+10
+
+zevenrodriguez/Weblab
+forked from UMInteractive/Weblab
+ Code
+ Pull requests 1
+ Projects 0
+ Wiki
+  Security
+ Insights
+Branch: master
+Weblab/CIM111-S12019/notes/layout/indexWithNav.html
+Find file
+Copy path
+ zevenrodriguez layout and media queries
+8b8819e 7 days ago
+1 contributor
+178 lines (141 sloc) 6.2 KB
+Raw
+Blame
+History
+
+
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+  <head>
+
+    <meta charset="utf-8">
+
+    <title>Basic Layout</title>
+
+
+
+    <style>
+
+
+
+      header{
+
+        width: 960px;
+
+        height: auto;
+
+        background-color: red;
+
+        margin: 0 auto;
+
+      }
+
+
+
+      footer{
+
+        width: 960px;
+
+        height: 100px;
+
+        background-color: red;
+
+        margin: 0 auto;
+
+      }
+
+
+
+      main{
+
+        width: 920px;
+
+        /* height: 500px; */
+
+        height: auto;
+
+        background-color: green;
+
+        padding: 20px;
+
+        margin: 0 auto;
+
+        margin-top: -18px;
+
+      }
+
+
+
+      #name{
+
+        text-align: center;
+
+      }
+
+
+
+      #imageSection{
+
+        width: 300px;
+
+        height: auto;
+
+        background-color: blue;
+
+        margin: 0 auto; /* 0 = top/bottom auto = left/right */
+
+        margin-top: 0px;
+
+        margin-bottom: 50px;
+
+        margin-left: 75px;
+
+        margin-right: auto;
+
+        padding: 20px;
+
+        padding-top: 20px;
+
+        padding-bottom: 20px;
+
+        padding-left: 20px;
+
+        padding-right: 20px;
+
+        display: inline-block;
+
+      }
+
+
+
+      #panda{
+
+        width: 250px;
+
+        display: block;
+
+        margin: 0 auto;
+
+        border-style: solid;
+
+        border-width: 10px;
+
+        border-top-width: 5px;
+
+        border-width: 5px 10px 15px 20px; /* top right bottom left */
+
+        border-color: yellow;
+
+      }
+
+
+
+      #p1{
+
+        width: 800px;
+
+        height: auto;
+
+        margin: 0 auto;
+
+        font-size: 20px;
+
+        line-height: 40px;
+
+      }
+
+
+
+      nav{
+
+        background-color: white;
+
+        width: 275px;
+
+        margin: 0 auto;
+
+      }
+
+
+
+      nav ul{
+
+
+
+        background-color: purple;
+
+      }
+
+
+
+      nav ul li{
+
+        list-style: none;
+
+        display: inline-block;
+
+        margin-right: 30px;
+
+        margin-left: -15px;
+
+
+
+
+
+      }
+
+
+
+      nav ul li a{
+
+        color: white;
+
+        text-decoration: none;
+
+      }
+
+
+
+      nav ul li a:hover{
+
+        color: grey;
+
+      }
+
+
+
+      /*
+
+      @media only screen and (min-width: 960px){
+
+        body{
+
+          background-color: black;
+
+        }
+
+      }
+
+
+
+      @media only screen and (max-width: 960px) and (min-width: 480px){
+
+        body{
+
+          background-color: green;
+
+        }
+
+      }
+
+
+
+      @media only screen and (max-width: 480px){
+
+        body{
+
+          background-color: pink;
+
+        }
+
+      }
+
+      */
+
+
+
+
+
+
+
+    </style>
+
+  </head>
+
+  <body>
+
+    <header>
+
+
+
+      <nav>
+
+        <ul>
+
+          <li><a href="#p1">Section 1</a></li>
+
+          <li><a href="#section2">Section 2</a></li>
+
+          <li><a href="#section3">Section 3</a></li>
+
+        </ul>
+
+      </nav>
+
+
+
+    </header>
+
+    <main>
+
+      <h1 id="name">My Site</h1>
+
+      <div id="imageSection">
+
+          <img id="panda" src="images/panda.jpg">
+
+          <p>This is a panda image</p>
+
+      </div>
+
+
+
+      <div id="imageSection">
+
+          <img id="panda" src="images/panda.jpg">
+
+          <p>This is a panda image</p>
+
+      </div>
+
+
+
+      <p id="p1">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+
+
+      <h2 id="section2">Section 2</h2>
+
+
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+
+
+      <h2 id="section3">Section 3</h2>
+
+
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+
+
+      <ul>
+
+        <li>one</li>
+
+        <li>two</li>
+
+        <li>three</li>
+
+      </ul>
+
+
+
+    </main>
+
+    <footer></footer>
+
+  </body>
+
+</html>
