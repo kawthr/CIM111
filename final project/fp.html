@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css?family=Rubik+Mono+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="desktop.css" media="only screen and (min-width:1200px)">
+  <link rel="stylesheet" href="mobile.css" media="only screen and (max-width:700px)">
+  <link rel="stylesheet" type="text/css" href="jquery.fancybox.min.css">
+    <title>Photoghraphy</title>
+
+    <style>
+      html {
+        min-height: 100%;
+        font-family: 'Nunito', sans-serif;
+      }
+
+      body {
+        line-height: 1.5;
+        margin: 0;
+        padding: 0;
+      }
+
+      h1 {
+        font-weight: 200;
+        font-size: 3rem;
+        color: white;
+        text-align: center;
+        padding: 20px 0;
+        font-family:'Rubik Mono One', sans-serif;
+
+        .byline,p{
+        }
+
+      }
+
+      nav {
+        text-align: center;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: transparent;
+        color: white;
+        padding: 0 1rem;
+        font-size: 1.6rem;
+        height: 80px;
+        line-height: 80px;
+        transition: .5s all ease;
+      }
+
+      nav.active {
+        background: white;
+        color: #111;
+      }
+
+      header {
+        height: 60vh;
+          background: linear-gradient(to bottom right, #3D4258, #6670A0, #9688B4);
+          max-width: 1200px;
+      }
+
+
+      html, body
+      {
+        height: 100%;
+      }
+
+      body
+      {
+        margin: 0px;
+        padding: 0px;
+        background: Black;
+        font-size: 12pt;
+        font-weight: 400;
+      }
+
+
+      h2{
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      font-family:  'Rubik Mono One', sans-serif;
+      }
+
+  p{
+    color: orange;
+    font-family: 'Raleway', sans-serif;
+  }
+
+      #wrapper10 p{
+      color: white
+      }
+
+
+      p, ol, ul, li
+      {
+      margin-top: 0;
+      font-family: 'Montserrat', sans-serif;
+      }
+
+      ol, ul
+      {
+      padding: 0;
+      list-style: none;
+      }
+
+      p
+      {
+      line-height: 180%;
+      }
+
+      strong
+      {
+      }
+
+      a
+      {
+      color: #0000FF;
+      }
+
+      a:hover
+      {
+      text-decoration: none;
+      }
+
+
+      .container
+      {
+      margin: 0px auto;
+      width: 1200px;
+      }
+
+      form
+      {
+      }
+
+      form label
+      {
+      display: block;
+      text-align: left;
+      margin-bottom: 0.5em;
+      }
+
+      form .submit
+      {
+      margin-top: 2em;
+      background: #B03500;
+      line-height: 1.5em;
+      font-size: 1.3em;
+      }
+
+      form input.text,
+      form select,
+      form textarea
+      {
+      position: relative;
+      -webkit-appearance: none;
+      display: block;
+      border: 0;
+      background: #fff;
+      background: rgba(255,255,255,0.75);
+      width: 100%;
+      border-radius: 0.50em;
+      margin: 1em 0em;
+      padding: 1.50em 1em;
+      box-shadow: inset 0 0.1em 0.1em 0 rgba(0,0,0,0.05);
+      border: solid 1px rgba(0,0,0,0.15);
+      -moz-transition: all 0.35s ease-in-out;
+      -webkit-transition: all 0.35s ease-in-out;
+      -o-transition: all 0.35s ease-in-out;
+      -ms-transition: all 0.35s ease-in-out;
+      transition: all 0.35s ease-in-out;
+      font-family: 'Source Sans Pro', sans-serif;
+      font-size: 1em;
+      outline: none;
+      }
+
+      form input.text:hover,
+      form select:hover,
+      form textarea:hover
+      {
+      }
+
+      form input.text:focus,
+      form select:focus,
+      form textarea:focus
+      {
+        box-shadow: 0 0 2px 1px #E0E0E0;
+        background: #fff;
+      }
+
+      form textarea
+      {
+        min-height: 12em;
+      }
+
+      form .formerize-placeholder
+      {
+        color: #555 !important;
+      }
+
+      form ::-webkit-input-placeholder
+      {
+
+      }
+
+      form :-moz-placeholder
+      {
+        color: #555 !important;
+      }
+
+      form ::-moz-placeholder
+      {
+        color: #555 !important;
+      }
+
+      form :-ms-input-placeholder
+      {
+        color: #555 !important;
+      }
+
+      form ::-moz-focus-inner
+      {
+        border: 0;
+      }
+
+
+      .image
+      {
+      display: inline-block;
+      border: 1px solid rgba(0,0,0,.1);
+      }
+
+      .image img
+      {
+      display: block;
+      width: 100%;
+      }
+
+      .image-full
+      {
+      display: block;
+      width: 100%;
+      margin: 0 0 3em 0;
+      }
+
+      .image-left
+      {
+      float: left;
+      margin: 0 2em 2em 0;
+      }
+
+      .image-centered
+      {
+      display: block;
+      margin: 0 0 2em 0;
+      }
+
+      .image-centered img
+      {
+      margin: 0 auto;
+      width: auto;
+      }
+
+      ul.style1
+      {
+      }
+
+
+      ul.contact
+      {
+      margin: 0;
+      padding: 2em 0em 0em 0em;
+      list-style: none;
+      }
+
+      ul.contact li
+      {
+      display: inline-block;
+      padding: 0em 0.30em;
+      font-size: 1.2em;
+      }
+
+      ul.contact li span
+      {
+      display: none;
+      margin: 0;
+      padding: 0;
+      }
+
+      ul.contact li a
+      {
+      color: #FFF;
+      }
+
+      ul.contact li a:before
+      {
+      display: inline-block;
+      background: #333333;
+      width: 60px;
+      height: 60px;
+      line-height: 60px;
+      text-align: center;
+      color: #FFFFFF;
+      }
+
+      .button
+      {
+      display: inline-block;
+      margin-top: 2em;
+      padding: 1em 2em 1em 2em;
+      background: #B03500;
+      letter-spacing: 0.20em;
+      line-height: 1.8em;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: 400;
+      font-size: 1.2em;
+      color: #FFF;
+      }
+
+      .button:before
+      {
+      display: inline-block;
+      background: #8DCB89;
+      margin-right: 1em;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      border-radius: 20px;
+      text-align: center;
+      color: #272925;
+      }
+
+      .button-small
+      {
+      padding: 0.9em 2em;
+      line-height: 1.8em;
+      font-size: 1em;
+      }
+
+      .title
+      {
+      margin-bottom: 3em;
+      }
+
+      .title h2
+      {
+      font-size: 2.8em;
+      color: rgba(255,255,255,0.9);
+      }
+
+      .title .byline
+      {
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      font-weight: 400;
+      font-size: 1.1em;
+      color: #6F6F6F;
+      }
+
+      #header-wrapper
+      {
+      overflow: hidden;
+      padding: 8em 0em;
+      background: #939E77;
+      width: 1200px;
+      }
+
+
+
+      #menu
+      {
+      width: 80%;
+      margin: 0px auto;
+      }
+
+      #menu ul
+      {
+      text-align: center;
+      }
+
+      #menu li
+      {
+      display: inline-block;
+      }
+
+      #menu li a, #menu li span
+      {
+      display: inline-block;
+      margin-left: 0.50em;
+      padding: 1.5em 1.5em;
+      letter-spacing: 0.20em;
+      text-decoration: none;
+      font-size: 0.90em;
+      font-weight: 600;
+      text-transform: uppercase;
+      outline: 0;
+      color: #FFF;
+      }
+
+      #menu li:hover a, #menu li.active a, #menu li.active span
+      {
+      }
+
+      #menu .current_page_item a
+      {
+      color: #FFF;
+      }
+
+
+
+      #banner
+      {
+      }
+
+
+      #wrapper1
+      {
+      background: #242424;
+      }
+
+      #wrapper2
+      {
+      background: #EDEDED;
+      }
+
+      #wrapper3
+      {
+      overflow: hidden;
+      padding: 8em 0em;
+      background: #FFF;
+      }
+
+      #wrapper4
+      {
+      overflow: hidden;
+      padding: 8em 0em;
+      background: #939E77;
+      }
+
+      #wrapper5{
+      overflow: hidden;
+      padding: 8em 0em;
+      background: white;
+      }
+
+      #wrapper6{
+      overflow: hidden;
+      padding: 8em 0em;
+      background: #D3D3D3;
+      ;
+      }
+      #wrapper7{
+      overflow: hidden;
+      padding: 8em 0em;
+      background:#696969;
+      }
+
+      #wrapper8{
+      overflow: hidden;
+      padding: 8em 0em;
+      background: #D3D3D3;
+      }
+
+      #wrapper9{
+      overflow: hidden;
+      padding: 8em 0em;
+      background: black;
+      }
+
+      #wrapper10{
+      overflow: hidden;
+      padding: 8em 0em;
+      background: black;
+      }
+
+
+
+      #welcome
+      {
+      overflow: hidden;
+      padding: 8em 0em;
+      text-align: center;
+      color: rgba(255,255,255,0.3);
+      }
+
+      #welcome .content
+      {
+      padding: 0em 8em;
+      }
+
+
+
+      #welcome a,
+      #welcome strong
+      {
+      color: rgba(255,255,255,0.6);
+      }
+
+
+      #footer
+      {
+      text-align: center;
+      }
+
+
+      #footer .title span
+      {
+      color: rgba(255,255,255,0.4);
+      }
+
+
+      #newsletter
+      {
+      overflow: hidden;
+      padding: 8em 0em;
+      background: #EDEDED;
+      text-align: center;
+      }
+
+      #newsletter .title h2
+      {
+      color: rgba(0,0,0,0.8);
+      }
+
+      #newsletter .content
+      {
+      width: 600px;
+      margin: 0px auto;
+      }
+
+      #portfolio
+      {
+      }
+
+      #portfolio .box
+      {
+      text-align: center;
+      color: rgba(0,0,0,0.5);
+      }
+
+      #portfolio h3
+      {
+      display: block;
+      padding-bottom: 1em;
+      text-transform: uppercase;
+      font-size: 1em;
+      color: rgba(0,0,0,0.6);
+      }
+
+      #portfolio .title
+      {
+      text-align: center;
+      }
+
+      #portfolio .title h2
+      {
+      color: rgba(0,0,0,0.8);
+      }
+
+      .column1,
+      .column2,
+      .column3,
+      .column4
+      {
+      width: 282px;
+      }
+
+      .column1,
+      .column2,
+      .column3
+      {
+      float: left;
+      margin-right: 24px;
+      }
+
+      .column4
+      {
+      float: right;
+      }
+
+      .container{
+      text-position:center;
+      text-align:center;
+      }
+
+      .resize {
+      width: 400px;
+      height: auto;
+      }
+
+      .resize {
+      width: 300px;
+      height: auto;
+      }
+
+      .resize{
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 50%;
+      }
+
+
+
+
+      .c-icon {
+      width:  36px;
+      height: 36px;
+      fill: currentColor;
+      transition: .2s;
+      }
+
+      .c-link--facebook:hover  { color: #3b5998 }
+      .c-link--twitter:hover   { color: #55acee }
+      .c-link--google:hover    { color: #dd4b39 }
+      .c-link--pinterest:hover { color: #bd081c }
+      .c-link--instagram:hover { color: #833ab4 }
+      .c-link--snapchat:hover  { color: #fbe00f }
+      .c-link--facebook:hover::after  { background: #3b5998 }
+      .c-link--twitter:hover::after   { background: #55acee }
+      .c-link--google:hover::after    { background: #dd4b39 }
+      .c-link--pinterest:hover::after { background: #bd081c }
+      .c-link--instagram:hover::after { background: #833ab4 }
+      .c-link--snapchat:hover::after  { background: #fbe00f }
+
+      .c-link {
+      position: relative;
+      color: #bbb;
+      }
+
+      .c-link:not(:last-of-type) {
+      margin-right: 15px;
+      }
+
+      .c-tooltip::before,
+      .c-tooltip::after {
+      display: block;
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, -10px);
+      opacity: 0;
+      transition: .2s;
+      }
+
+      .c-tooltip::before {
+      content: '';
+      bottom: calc(100% + 2px);
+      border: solid 5px transparent;
+      border-top-color: currentColor;
+      }
+
+      .c-tooltip::after {
+      content: attr(aria-label);
+      bottom: calc(100% + 12px);
+      padding: .61em .93em;
+      font-size: .875rem;
+      color: white;
+      border-radius: 3px;
+      }
+
+      .c-tooltip:hover::before,
+      .c-tooltip:hover::after {
+      opacity: 1;
+      transform: translate(-50%);
+      }
+
+      .pens-link-container {
+      flex-basis: 100%;
+      font-size: .9rem;
+      text-align: center;
+      }
+
+      .pens-link {
+      margin-bottom: 0;
+      background: white;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, .1);
+      border: none;
+      }
+
+      </style>
+
+
+  </head>
+  <header>
+
+
+
+
+
+    <div id="header-wrapper"
+    	<div id="header" class="container">
+        <nav>Photolly</nav>
+        <main id="begin">
+    		<div id="menu">
+    			<ul>
+            <li><a href="#wrapper3" accesskey="1" title="">Services</a></li>
+    				<li><a href="#wrapper1" accesskey="2" title="">About us</a></li>
+    				<li><a href="#wrapper8" accesskey="3" title="">Our photoghrapers</a></li>
+    				<li><a href="#wrapper5" accesskey="4" title="">Reservarion</a></li>
+    				<li><a href="#wrapper4" accesskey="5" title="">Contact Us</a></li>
+            <li><a href="#wrapper9" accesskey="6" title="">Blog</a></li>
+              </main>
+  </div>
+  </header>
+  <body>
+
+
+
+
+
+<div id="wrapper3">
+	<div id="portfolio" class="container">
+		<div class="title">
+			<h2>Our Services</h2>
+			<span class="byline">Photolly offers different services that serve both photoghrapers and the consumer.</span> </div>
+		<div class="column1">
+			<div class="box"> <a href="#"><img src="images/ws1.jpg" alt="" class="image image-full" /></a>
+				<h3>Photolly Workshops</h3>
+				<p>We offer different workshops for various projects that you can join for a simple price and get a certificate at the end!</p>
+				<a href="#wrapper5" class="button button-small">Workshops</a> </div>
+		</div>
+		<div class="column2">
+			<div class="box"> <a href="#"><img src="images/std1.jpg" alt="" class="image image-full" /></a>
+				<h3>Photolly Studios</h3>
+				<p>You can reserve now one of our studios for your work and projects!</p>
+				<a href="#wrapper6" class="button button-small">Reserve a studio</a> </div>
+		</div>
+		<div class="column3">
+			<div class="box"> <a href="#"><img src="images/pts3.jpg" alt="" class="image image-full" /></a>
+				<h3>Photolly photoshoots</h3>
+				<p>contanct a photoghraper for your special moments , occasions or even your business products </p>
+				<a href="#wrapper7" class="button button-small">photoshoots</a> </div>
+		</div>
+		<div class="column4">
+			<div class="box"> <a href="#"><img src="images/ph1.jpg" alt="" class="image image-full" /></a>
+				<h3>Photolly connect</h3>
+				<p>Photolly connect is a one of a kind space for photoghrapers to connect toghether share their pofile and gallery for the world through our page. Contact each other and meet one-by-one to share thoughts and ideas. </p>
+				<a href="#wrapper8" class="button button-small">connect</a> </div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+<div id="wrapper1">
+	<div id="welcome" class="container">
+		<div class="title">
+			<h2>About us</h2>
+			<span class="byline">One of a kind websites for photoghrapers!</span> </div>
+		<div class="content">
+			<p> <strong>Photolly</strong> is the first version of the website that is open recently that helps you getting a studio , join workshops and learn all about Photoghraphy , book photoshoots for your events and if you are a photographer its even better! The second version that will be uploaded very soon will include and serves videoghrapics! our team is excited to assist growing your business , career and share with you your special moments!</div>
+	</div>
+
+
+
+
+  <div id="wrapper5">
+    	<h2>Photolly Workshops</h2>
+<img class="resize" src="images/ws2.jpg"/>
+<img class="resize" src="images/ws3.jpg"/>
+  	<div id="workshops" class="container">
+  		<div class="content">
+  			<p><strong>Photolly</strong> offers:</p>
+        <ul>
+          <li>Editing Workshops</li>
+          <li>Photoghraphics workshop for beginers</li>
+          <li>Photoghraphics workshop for advanced</li>
+          <li>Start your Photoghraphy career workshop</li>
+          <li>Tips and tricks for marketing Photoghraphy</li>
+          <li>Food Photoghraphy workshops</li>
+        </ul>
+  			<a href="#" class="button">Find a workshop</a> </div>
+
+
+  <div id="wrapper6">
+    <h2>Photolly Studios</h2>
+    <img class="resize" src="images/std2.jpg"/>
+    <img class="resize" src="images/std3.jpg"/>
+  	<div id="studios" class="container">
+  		<div class="title">
+  			<span class="byline">Reserve your studio now!</span> </div>
+  		<div class="content">
+  			<p>You will receive a full service experience from photo session to design to print. For additional information, pricing, and to check available dates, please click house button below to access Inquiry form.</p>
+  			<a href="#" class="button">Reserve Studio</a> </div>
+
+
+
+
+
+  <div id="wrapper7">
+    	<h2>Photolly photoshoots</h2>
+        <img class="resize" src="images/pts2.jpg"/>
+        <img class="resize" src="images/pts3.jpg"/>
+  	<div id="photoshoots" class="container">
+  		<div class="title">
+  			<span class="byline">book your photoshoot now</span> </div>
+  		<div class="content">
+  			<p><strong>Photolly</strong> offers photoshoot either indoor in our studios or outdoor the place you and your photographer discuss about. Photolly is just a connection between you and the photographer , if you scroll through our conncet page and didn't find the photoghraper you need our time is more than happy to get your information and look them up for you , set it up and contact you with all you need!</p>
+  			<a href="#" class="button">Book your photoshoot</a> </div>
+
+
+
+
+
+
+        <div id="wrapper9">
+        	<div id="blog" class="container">
+        		<div class="title">
+        			<h2>Blog</h2>
+        			<span class="byline">Why Photolly?</span> </div>
+        		<div class="content">
+        			<p> <strong>Photolly</strong> is the first version of the website that is open recently that helps you getting a studio , join workshops and learn all about Photoghraphy , book photoshoots for your events and if you are a photographer its even better! The second version that will be uploaded very soon will include and serves videoghrapics! our team is excited to assist growing your business , career and share with you your special moments!</div>
+        	</div>
+          <p>
+Photolly is a project that we started it with a website till we get enough support to our help our project grow wider and bigger. It supports photographers and photography in general. Its helps different people in different positions. Either if you are a beginner and want to learn about photography or you need help with your photography career. Why are we doing it? After searching in the business market focusing specially on social media. We found that photography job availability increased 80% more than before social media. Why is that? Because people is taking social media nowadays as a full-time job, getting money triple than what they get in a regular job. This leads to the needs of more jobs but for specific careers mostly marketing, photography, graphic design, and programming. These careers sometimes had a tough time to reach a lot of people and expand their career and the social media helped reach is goal easily. So what now? Even though all these differences in the world helped a lot of careers it has reached to a level that with this much of people, some people still isn’t getting the perfect chance to shine because it’s based on two things: people finding you and supporting you. So how Photolly can help them? Photolly has different services from offering workshops for people in different parts in photography or even if you have a project you need to finish. Our team is able to collect all the information from you such as what’s your project? What do you need exactly? Is it only brainstorming or the whole project? How many people do you need? After collecting all the information that we need and setting up a time and place either its online or in our place! We will upload your workshop to our website so people can participate and help. How is this profitable for us to do workshops? We offer you the place, advertising and people but the application fee from customers goes to Photolly, is this other than you paying a simple price for uploading your project and promoting for 30$! This is different if it’s workshop for teaching or assisting in a project. If it’s a teaching workshop Photolly only takes 20% other than the price of reserving the place for the workshop, the rest from the application fees is for the instructor. If it’s a project assisting the host we take the whole amount! For example, if a person contacts our team needing help in a project we offer applying to the workshop for as less as 10$ and 30$ for the host, so if 10 applies to the workshop we get 130$. Photolly also provides membership monthly and annually for workshops that saves a lot for people who participate in more than one workshop and wants to apply this work in a project we held. The second part is reserving our studios, Photolly has 20 different studios for different things either it’s for a people photoshoot or a product photoshoot. Prices for studios vary on timing and people in our team that you need to assist you from 50$-130$. The third part is photoshoot (indoor or outdoor) this works in two ways either you can access connect page and see different photographers profiles and contacting them directly or contact our team and we set up everything. This would profit us by taking 5% from every photoshoot. The last part is Photolly Connect which is a space for photographers to build their portfolio, gallery and interact toghether. Currently most of the serveries excluding Photolly connect is available only in the USA. The website is really simple and needs a lot of development for a big idea like this but this should be a good start for it. If we apply our project on SWOT we can explain it that the strength and weakness in this kind of projects depends on the right way to start and a team ready for all the work. If the team wasn’t qualified this will be out biggest weakness and maybe loss. Our strength is that comparing our project to others companies our projects we see that there isn’t a lot of competitors with us which gives us a chance to expand more. Opportunity is divided to three sections the company, photographers and consumers, for us is by the support we get and the more usage for our website the more profits and growth we get. We have lots of goals we would like to achieve, first to include videography in the second version. Get our team bigger, satisfy our customers with what they need in the best quality and service and lastly is to transform our company to a marketing company specified in photography and videography. Our biggest limitation or fears is the difficulty in the begging to build the company first which needs a human resources department , marketing department , technical department , management , photographer assistant department , accounting department and the call center. This means that we need 80 employees if we want to finish every workshop, reservation and technical issues in the same time. Which means every department will need 10-13 qualified employees. This is a challenge for us! As we said the website will need more sections especially in the Connect section because it will be built as the consumer build their own gallery which also would be a challenge for us as this would lead to many technical issues and need a 24/7 technical support. For the website the images will be developed as we are going to include our own photos for our work and team. This project is very profitable as if we offered 6 different teaching workshop for 50$ each and 25 person participate in every workshop it would equal to 1250$ for a workshop 7500$ for 6 workshops, other than the studios, photoshoot and memberships that we get daily! Our last challenge would be the exact budget to build the company place, studios, materials and devices.
+</p>
+
+
+          <div id="wrapper10">
+            <div id="blog" class="container">
+              <div class="title">
+                <h2>prices</h2>
+              <div class="content">
+                  <img class="resize" src="images/menu.png" data-width="2400" data-height="1600">/>
+                  <p>For more photoshooting prices please contact our team or the photograapher you choose to work with directly!</p>
+                  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+                  <script type="text/javascript" src="/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+               data-width="2400" data-height="1600">
+
+
+
+
+
+
+
+
+
+
+</div><div id="wrapper2">
+	<div id="newsletter" class="container">
+		<div class="title">
+			<h2>Signup</h2>
+			<span class="byline">Sign up to receive our once-in-a-while newsletters! We share our latest workshops , offers and studio news through our emails.</span> </div>
+		<div class="content">
+			<form method="post" action="#">
+				<div class="row half">
+					<div class="6u">
+						<input type="text" class="text" name="name" placeholder="Name" />
+					</div>
+					<div class="6u">
+						<input type="text" class="text" name="email" placeholder="Email" />
+					</div>
+				</div>
+				<div class="row half">
+					<div class="12u">
+						<textarea name="message" placeholder="Message"></textarea>
+					</div>
+				</div>
+				<div class="row">
+					<div class="12u"> <a href="#" class="button submit">Send Message</a> </div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+<div id="wrapper4">
+	<div id="footer" class="container">
+		<div>
+			<header class="title">
+				<h2>Get in touch</h2>
+        <a href="#0" class="c-link c-link--facebook c-tooltip" aria-label="Facebook">
+            <svg class="c-icon"><use xlink:href="#icon--facebook"></use></svg>
+        </a>
+
+        <a href="#0" class="c-link c-link--twitter c-tooltip" aria-label="Twitter">
+            <svg class="c-icon"><use xlink:href="#icon--twitter"></use></svg>
+        </a>
+
+        <a href="#0" class="c-link c-link--google c-tooltip" aria-label="Google+">
+            <svg class="c-icon"><use xlink:href="#icon--google"></use></svg>
+        </a>
+
+        <a href="#0" class="c-link c-link--pinterest c-tooltip" aria-label="Pinterest">
+            <svg class="c-icon"><use xlink:href="#icon--pinterest"></use></svg>
+        </a>
+
+        <a href="#0" class="c-link c-link--instagram c-tooltip" aria-label="Instagram">
+            <svg class="c-icon"><use xlink:href="#icon--instagram"></use></svg>
+        </a>
+
+        <a href="#0" class="c-link c-link--snapchat c-tooltip" aria-label="Snapchat">
+            <svg class="c-icon"><use xlink:href="#icon--snapchat"></use></svg>
+        </a>
+
+        <svg style="display: none">
+            <symbol id="icon--facebook" viewBox="0 0 24 24">
+                <path d="M19,4V7H17A1,1 0 0,0 16,8V10H19V13H16V20H13V13H11V10H13V7.5C13,5.56 14.57,4 16.5,4M20,2H4A2,2 0 0,0 2,4V20A2,2 0 0,0 4,22H20A2,2 0 0,0 22,20V4C22,2.89 21.1,2 20,2Z" />
+            </symbol>
+            <symbol id="icon--twitter" viewBox="0 0 24 24">
+                <path d="M17.71,9.33C17.64,13.95 14.69,17.11 10.28,17.31C8.46,17.39 7.15,16.81 6,16.08C7.34,16.29 9,15.76 9.9,15C8.58,14.86 7.81,14.19 7.44,13.12C7.82,13.18 8.22,13.16 8.58,13.09C7.39,12.69 6.54,11.95 6.5,10.41C6.83,10.57 7.18,10.71 7.64,10.74C6.75,10.23 6.1,8.38 6.85,7.16C8.17,8.61 9.76,9.79 12.37,9.95C11.71,7.15 15.42,5.63 16.97,7.5C17.63,7.38 18.16,7.14 18.68,6.86C18.47,7.5 18.06,7.97 17.56,8.33C18.1,8.26 18.59,8.13 19,7.92C18.75,8.45 18.19,8.93 17.71,9.33M20,2H4A2,2 0 0,0 2,4V20A2,2 0 0,0 4,22H20A2,2 0 0,0 22,20V4C22,2.89 21.1,2 20,2Z" />
+            </symbol>
+            <symbol id="icon--google" viewBox="0 0 24 24">
+                <path d="M23,11H21V9H19V11H17V13H19V15H21V13H23M8,11V13.4H12C11.8,14.4 10.8,16.4 8,16.4C5.6,16.4 3.7,14.4 3.7,12C3.7,9.6 5.6,7.6 8,7.6C9.4,7.6 10.3,8.2 10.8,8.7L12.7,6.9C11.5,5.7 9.9,5 8,5C4.1,5 1,8.1 1,12C1,15.9 4.1,19 8,19C12,19 14.7,16.2 14.7,12.2C14.7,11.7 14.7,11.4 14.6,11H8Z" />
+            </symbol>
+            <symbol id="icon--pinterest" viewBox="0 0 24 24">
+                <path d="M13,16.2C12.2,16.2 11.43,15.86 10.88,15.28L9.93,18.5L9.86,18.69L9.83,18.67C9.64,19 9.29,19.2 8.9,19.2C8.29,19.2 7.8,18.71 7.8,18.1C7.8,18.05 7.81,18 7.81,17.95H7.8L7.85,17.77L9.7,12.21C9.7,12.21 9.5,11.59 9.5,10.73C9.5,9 10.42,8.5 11.16,8.5C11.91,8.5 12.58,8.76 12.58,9.81C12.58,11.15 11.69,11.84 11.69,12.81C11.69,13.55 12.29,14.16 13.03,14.16C15.37,14.16 16.2,12.4 16.2,10.75C16.2,8.57 14.32,6.8 12,6.8C9.68,6.8 7.8,8.57 7.8,10.75C7.8,11.42 8,12.09 8.34,12.68C8.43,12.84 8.5,13 8.5,13.2A1,1 0 0,1 7.5,14.2C7.13,14.2 6.79,14 6.62,13.7C6.08,12.81 5.8,11.79 5.8,10.75C5.8,7.47 8.58,4.8 12,4.8C15.42,4.8 18.2,7.47 18.2,10.75C18.2,13.37 16.57,16.2 13,16.2M20,2H4C2.89,2 2,2.89 2,4V20A2,2 0 0,0 4,22H20A2,2 0 0,0 22,20V4C22,2.89 21.1,2 20,2Z" />
+            </symbol>
+            <symbol id="icon--instagram" viewBox="0 0 24 24">
+                <path d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z" />
+            </symbol>
+            <symbol id="icon--snapchat" viewBox="0 0 24 24">
+                <path d="M12,20.45C10.81,20.45 10.1,19.94 9.47,19.5C9,19.18 8.58,18.87 8.08,18.79C6.93,18.73 6.59,18.79 5.97,18.9C5.86,18.9 5.73,18.87 5.68,18.69C5.5,17.94 5.45,17.73 5.32,17.71C4,17.5 3.19,17.2 3.03,16.83C3,16.6 3.07,16.5 3.18,16.5C4.25,16.31 5.2,15.75 6,14.81C6.63,14.09 6.93,13.39 6.96,13.32C7.12,13 7.15,12.72 7.06,12.5C6.89,12.09 6.31,11.91 5.68,11.7C5.34,11.57 4.79,11.29 4.86,10.9C4.92,10.62 5.29,10.42 5.81,10.46C6.16,10.62 6.46,10.7 6.73,10.7C7.06,10.7 7.21,10.58 7.25,10.54C7.14,8.78 7.05,7.25 7.44,6.38C8.61,3.76 11.08,3.55 12,3.55C12.92,3.55 15.39,3.76 16.56,6.38C16.95,7.25 16.86,8.78 16.75,10.54C16.79,10.58 16.94,10.7 17.27,10.7C17.54,10.7 17.84,10.62 18.19,10.46C18.71,10.42 19.08,10.62 19.14,10.9C19.21,11.29 18.66,11.57 18.32,11.7C17.69,11.91 17.11,12.09 16.94,12.5C16.85,12.72 16.88,13 17.04,13.32C17.07,13.39 17.37,14.09 18,14.81C18.8,15.75 19.75,16.31 20.82,16.5C20.93,16.5 21,16.6 20.97,16.83C20.81,17.2 20,17.5 18.68,17.71C18.55,17.73 18.5,17.94 18.32,18.69C18.27,18.87 18.14,18.9 18.03,18.9C17.41,18.79 17.07,18.73 15.92,18.79C15.42,18.87 15,19.18 14.53,19.5C13.9,19.94 13.19,20.45 12,20.45Z" />
+            </symbol>
+        </svg>
+        </div>
+		</div>
+	</div>
+</div>
+  </body>
+  <footer></footer>
+</html>
